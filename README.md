@@ -1,4 +1,4 @@
 # Docs
 
-* [dialogable](./dialoable)
-* [timer](./timer)
+* [dialogable](dialogable)
+* [timer](timer)

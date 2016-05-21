@@ -311,11 +311,62 @@ timerElement.addEventListener('onend', function () {
 ```
 
 ```js
+// Tempo iniciado automaticamente com 2 horas.
+// (...)
 var timerElement = document.querySelector('.ava-timer');
+var timer = timerElement.AvaTimer;
 
 timerElement.addEventListener('onend', function () {
-  console.log('O tempo acabou.');  
+  console.log('Tempo acabou.');  
 });
 
+timerElement.addEventListener('oninit', function () {
+  console.log('Contador inicializado.');  
+});
 
+timerElement.addEventListener('onpause', function () {
+  console.log('Contador parado.');  
+});
+
+timerElement.addEventListener('onstart', function () {
+  console.log('Contador retomado.');  
+});
+
+timerElement.addEventListener('onrestart', function () {
+  console.log('Contador reiniciado.');  
+});
+
+timer.end();          // "Tempo acabou."
+
+timer.getTime();      // 0
+
+timer.set(60000);
+
+timer.getTime();      // 60000
+
+timer.getTimeMins();  // 1
+
+timer.start();        // "Contador inicializado." 
+                      // "Contador retomado."
+                      
+timer.pause();        // "Contador parado."
+
+timer.addMins(5);
+
+timer.start();        // "Contador retomado." 
+
+timer.getTimeMins();  // 6
+
+timer.removeMins(10); // false
+
+timer.removeMins(1);  // true
+
+timer.getTimeMins();  // 5
+
+timer.restart();      // "Tempo acabou."
+                      // "Contador retomado."
+                      // "Contador inicializado."
+                      // "Contador reiniciado."
+
+timer.getTimeHours(); // 2
 ```
