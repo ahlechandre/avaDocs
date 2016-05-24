@@ -56,9 +56,9 @@ Além disso, cada *link* contém um elemento `span` com a classe `ava-tabs__item
 <div id="tab-2">Conteúdo da tab 2</div>
 ```
 
-# Modificadores
+## Modificadores
 
-## Mostrar apenas ícones
+### Mostrar apenas ícones
 Adicione o modificador `ava-tabs--icons` à lista:
 
 ```html
@@ -72,7 +72,7 @@ Adicione o modificador `ava-tabs--icons` à lista:
 </ul>
 ``` 
 
-## Tab desativa
+### Tab desativa
 Adicione a classe `disabled` ao item escolhido:
  
 ```html
@@ -86,7 +86,7 @@ Adicione a classe `disabled` ao item escolhido:
 </ul>
 ```
 
-# Dependencia 
+## Dependencia 
 
 O componente possui dependência do Materialize. Então, complemente os elementos com as seguintes classes:
 
@@ -101,11 +101,11 @@ O componente possui dependência do Materialize. Então, complemente os elemento
 </ul>
 ```
 
-# Selecionar tab
+### Selecionar tab
 
 Existem duas formas de selecionar uma tab.
 
-## 1. Manualmente
+#### 1. Manualmente
 Especificado na marcação do componente. Adicione a classe `active` ao link a ser selecionado. 
 
 ```html
@@ -123,7 +123,7 @@ Especificado na marcação do componente. Adicione a classe `active` ao link a s
 </ul>
 ```
 
-## 2. Dinamicamente
+#### 2. Dinamicamente
 
 Acesse a instância do componente e invoque o método `active` passando o `id` do conteúdo a ser mostrado:
 
